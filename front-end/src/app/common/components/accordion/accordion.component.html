@@ -1,0 +1,6 @@
+<div class="header" [class.active]="showContent" (click)="showContent = !showContent">
+  <ng-content select="[header]"></ng-content>
+</div>
+<div class="content" *ngIf="showContent">
+  <ng-content select="[body]"></ng-content>
+</div>

@@ -1,0 +1,12 @@
+{
+  "port": 4001,
+  "database": {
+    "name": "ContactsApp",
+    "host": "localhost",
+    "port": 27017,
+    "user": "",
+    "pw": ""
+  },
+  "SECRET":"ContactsApp",
+  "TEMPLOGIN":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYWNlMmFlNDk2Y2ZlMmNkOGZlNDA0OSIsImlhdCI6MTU3MTYxMTU1NCwiZXhwIjoxNTcyMjE2MzU0fQ.jBoOaiWccsa40bDYyaZ3EBCxOTHSmllmZ5YxFcAG5uM"
+}

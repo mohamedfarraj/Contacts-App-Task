@@ -1,0 +1,46 @@
+@import './variables';
+@import './mixins';
+
+footer {
+  background: $primaryColor;
+  padding: 40px 0;
+  text-align: center;
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+    }
+    a {
+      color: white;
+      font-size: 17px;
+      margin: 0 20px;
+      display: block;
+      font-weight: 700;
+    }
+  }
+
+  .store-btns {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    a {
+      height: 40px;
+      display: block;
+      margin: 0 10px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .copyrights {
+    font-size: 13px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+}

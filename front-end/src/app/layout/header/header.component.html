@@ -1,0 +1,30 @@
+<header>
+  <div class="container">
+    <a [routerLink]="['/home']" class="logo">
+      <img src="assets/images/ar-logo-white.svg" alt="">
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a [routerLink]="['/home']" [routerLinkActive]="['active']">{{ 'header.homeLink' | translate }}</a>
+        </li>
+        <li>
+          <a href="#">{{ 'header.aboutLink' | translate }}</a>
+        </li>
+        <li>
+          <a href="#">{{ 'header.termsLink' | translate }}</a>
+        </li>
+        <li>
+          <a href="#">{{ 'header.contactLink' | translate }}</a>
+        </li>
+        
+        
+      </ul>
+    </nav>
+    
+
+    <button type="button" class="language-switch" (click)="changeLang()">
+      {{ uiService.getOtherLang === 'en' ? 'English' : 'عربي' }}
+    </button>
+  </div>
+</header>

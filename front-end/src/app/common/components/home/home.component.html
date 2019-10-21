@@ -1,0 +1,82 @@
+<div class="page-header">
+  <h1>{{ 'general.PageTitle' | translate }} {{ 'general.contacts' | translate }}</h1>
+  <div class="actions">
+    <button placement="top" hide-delay="0" type="button" [routerLink]="['/contacts/add']"
+      class="btn btn-success has-icon">
+      <svg viewBox="0 0 16 16">
+        <use xlink:href="assets/images/sprite.svg#plus"></use>
+      </svg>
+      {{ 'general.addNew' | translate }}
+    </button>
+  </div>
+</div>
+
+<ng-container *ngIf="allData.length; else noData">
+
+  <table *ngIf="allData; else spinner" class="table table-bordered table-hover text-right">
+    <thead>
+      
+      
+      <th>{{ 'general.name' | translate }}</th>
+      <th>{{ 'general.email' | translate }}</th>
+      <th>{{ 'general.actions' | translate }}</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of allData">
+        
+        
+        <td>{{ data.name }}</td>
+        <td>{{ data.nameEn }}</td>
+
+        <td>
+          <div class="actions">
+            <button [routerLink]="['/contacts/details/', data._id]" placement="top" hide-delay="0" type="button"
+              class="btn btn-info btn-icon">
+              <svg viewBox="0 0 16 16">
+                <use xlink:href="assets/images/sprite.svg#eye"></use>
+              </svg>
+            </button>
+            <button [routerLink]="['/contacts/edit/', data._id]" placement="top" hide-delay="0" type="button"
+              class="btn btn-warning btn-icon">
+              <svg viewBox="0 0 16 16">
+                <use xlink:href="assets/images/sprite.svg#edit"></use>
+              </svg>
+            </button>
+            <button (click)="deleteData(data._id)" placement="top" hide-delay="0" type="button"
+              class="btn btn-danger btn-icon">
+              <svg viewBox="0 0 16 16">
+                <use xlink:href="assets/images/sprite.svg#delete"></use>
+              </svg>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>
+<div class="pagination-info" *ngIf="pageInfo?.totalPages > 1">
+
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link first" [class.disabled]="selected <= 1" (click)="firstPage()">
+        &laquo;</a> </li>
+    <li class="page-item"><a class="page-link prev" [class.disabled]="selected <= 1" (click)="prevPage()">
+        &lsaquo;</a> </li>
+    <li class="page-item" *ngIf="pagingStart > 0">
+      <a class="page-link" (click)="prevNumbers()">...</a>
+    </li>
+
+    <li class="page-item" *ngFor="let page of pageCount| slice: pagingStart:pagingEnd; let i = index "><a
+        class="page-link" (click)="isSelected(page)" [class.active]="selected === page">{{ page }}</a>
+    </li>
+
+    <li class="page-item" *ngIf="pagingEnd < pageInfo?.totalPages">
+      <a class="page-link" (click)="nextNumbers()">...</a>
+    </li>
+
+    <li class="page-item"><a class="page-link next" [class.disabled]="selected >= pageInfo?.totalPages"
+        (click)="nextPage()">&rsaquo;</a></li>
+
+    <li class="page-item"><a class="page-link last" [class.disabled]="selected >= pageInfo?.totalPages"
+        (click)="lastPage()">&raquo;</a></li>
+  </ul>
+</div>

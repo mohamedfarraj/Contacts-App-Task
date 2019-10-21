@@ -1,0 +1,10 @@
+{
+    "header": {
+        "homeLink": "Home",
+        "aboutLink": "About Us",
+        "termsLink": "Terms of Use",
+        "contactLink": "Contact Us",
+        "joinNow": "Join Now",
+        "register": "Register"
+    }
+}

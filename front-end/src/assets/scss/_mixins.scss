@@ -1,0 +1,40 @@
+@mixin hide {
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: none;
+  display: none !important;
+}
+
+@mixin hideText {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+}
+
+// This is to override the clearfix mixin
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin buttonReset() {
+  background: none;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: 0;
+}
+
+@mixin grid($min, $gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+  grid-gap: $gap;
+}

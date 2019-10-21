@@ -1,0 +1,8 @@
+<div class="modal-title">
+  <h2>{{ 'general.choosePeriod' | translate }}</h2>
+</div>
+<div class="periods">
+  <div *ngFor="let period of periods" [class.disabled]="period.status !== 'available'" style="cursor: pointer;" (click)="bookNow(period._id)">
+      {{ period.time | date: 'shortTime' }}
+  </div>
+</div>

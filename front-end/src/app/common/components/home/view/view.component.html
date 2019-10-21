@@ -1,0 +1,154 @@
+
+
+  
+  
+  <ng-container *ngIf="data; else noData">
+    <table class="table table-bordered  table-striped text-right">
+      <tr>
+        <th width="200">
+          {{ 'general.logo' | translate }}
+        </th>
+        <td>
+          <img height="250" width="300" #image [src]="data.image ? imageUrl +'/'+ data.image : 'assets/images/default-img.jpg'
+                    " alt="">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          {{ 'general.name' | translate }}
+        </th>
+        <td>
+          {{ data.name }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          {{ 'general.nameEn' | translate }}
+        </th>
+        <td>
+          {{ data.nameEn }}
+        </td>
+      </tr>
+  
+      <tr>
+        <th>
+          {{ 'general.hospitals' | translate }}
+        </th>
+        <td>
+          {{ data.hospitalId.name }}
+        </td>
+      </tr>
+  
+      <tr>
+        <th>
+          {{ 'general.clinics' | translate }}
+        </th>
+        <td>
+          {{ data.clinicsId?.name }}
+        </td>
+      </tr>
+  
+  
+  
+      <tr>
+        <th>
+          {{ 'general.medicalSpecialties' | translate }}
+        </th>
+        <td>
+          {{ data.medicalSpecialtiesId.name }}
+        </td>
+      </tr>
+  
+  
+  
+      <h1 style="text-align: right"> {{ 'general.address' | translate }}</h1>
+      <tr>
+        <th>
+          {{ 'general.countries' | translate }}
+        </th>
+        <td>
+          {{ data.basicInformation.address.countriesId.name }}
+        </td>
+      </tr>
+  
+  
+      <tr>
+        <th>
+          {{ 'general.goves' | translate }}
+        </th>
+        <td>
+          {{ data.basicInformation.address.govsId.name }}
+        </td>
+      </tr>
+  
+  
+  
+      <tr>
+        <th>
+          {{ 'general.cities' | translate }}
+        </th>
+        <td>
+          {{ data.basicInformation.address.citiesId.name }}
+        </td>
+      </tr>
+  
+  
+      <tr>
+        <th>
+          {{ 'general.address' | translate }}
+        </th>
+        <td>
+          {{ data.basicInformation.address.address }}
+        </td>
+      </tr>
+  
+  
+      <h1 style="text-align: right"> {{ 'general.contact' | translate }}</h1>
+      <tr>
+        <th>
+          {{ 'general.hotline' | translate }}
+        </th>
+        <td>
+          {{ data.basicInformation.contact.hotline }}
+        </td>
+      </tr>
+  
+      <tr>
+        <th>
+          {{ 'general.phone' | translate }}
+        </th>
+        <td>
+          {{ data.basicInformation.contact.phone }}
+        </td>
+      </tr>
+  
+      <tr>
+          <th>
+            {{ 'general.fax' | translate }}
+          </th>
+          <td>
+            {{ data.basicInformation.contact.fax }}
+          </td>
+        </tr>
+  
+  
+  
+  
+        <tr>
+            <th>
+              {{ 'general.note' | translate }}
+            </th>
+            <td>
+              {{ data.basicInformation.note }}
+            </td>
+          </tr>
+  
+  
+          
+  
+  
+  
+    </table>
+  
+  </ng-container>
+  

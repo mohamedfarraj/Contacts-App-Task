@@ -1,0 +1,64 @@
+<!-- 
+
+<div>
+    <div class="form">
+        <form [formGroup]="dataForm">
+
+
+
+            <mat-form-field>
+                <input matInput formControlName="name" [placeholder]="'general.name' | translate" />
+                
+                
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="tel" formControlName="email" [placeholder]="'general.email' | translate" />
+               
+                
+            </mat-form-field>
+
+
+
+
+            
+
+
+            <h1 style="text-align: right"> {{ 'general.medicalInsuranceCompanies' | translate }}</h1>
+  
+          <div formArrayName="medicalInsuranceCompanies">
+  
+            <ng-container *ngFor="let item of phones;let i = index " [formGroupName]="i">
+              <button mat-button class="btn btn-info" (click)="addPhones()">+</button>
+              <button mat-button class="btn btn-danger" (click)="phones.splice(i,1)">-</button>
+  
+              <mat-form-field>
+                <input matInput formControlName="label" [placeholder]="'general.label' | translate" />
+
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="tel" formControlName="phone" [placeholder]="'general.phone' | translate" />
+
+            </mat-form-field>
+            </ng-container>
+  
+          </div> 
+
+
+
+
+
+
+            <div class="action">
+                <button type="button" *ngIf="!data" [disabled]="!dataForm.valid" (click)="submit()"
+                    class="btn btn-primary">
+                    {{ 'general.addNew' | translate }}
+                </button>
+                <button type="button" *ngIf="data" [disabled]="!dataForm.valid" (click)="submit()"
+                    class="btn btn-primary">
+                    {{ 'general.update' | translate }}
+                </button>
+            </div>
+        </form>
+    </div>
+</div> -->

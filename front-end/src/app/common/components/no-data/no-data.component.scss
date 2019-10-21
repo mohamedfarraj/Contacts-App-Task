@@ -1,0 +1,12 @@
+.no-data-message {
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    height: 60px;
+    opacity: .3;
+  }
+}

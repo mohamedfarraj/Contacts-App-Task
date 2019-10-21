@@ -1,0 +1,228 @@
+@import './variables';
+@import './mixins';
+
+.mat-form-field {
+  font-family: $font;
+  width: 100%;
+  margin-bottom: 15px;
+
+  .mat-icon.active {
+    cursor: pointer;
+  }
+}
+.mat-select,
+.mat-slide-toggle-content,
+.mat-radio-button {
+  font-family: $font;
+}
+.mat-form-field-label,
+.mat-form-field-subscript-wrapper {
+  overflow: visible !important;
+}
+.mat-slider-horizontal {
+  width: 100%;
+  .mat-slider-track-background {
+    transform-origin: 100% 100% !important;
+
+    .ltr & {
+      transform-origin: 0 0 !important;
+    }
+  }
+
+  .mat-slider-track-fill {
+    transform-origin: 0 0 !important;
+    .ltr & {
+      transform-origin: 100% 100% !important;
+    }
+  }
+}
+.mat-datepicker-toggle-default-icon {
+  width: 20px !important;
+}
+
+.radios {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  > label {
+    margin-left: auto;
+    font-size: 15px;
+
+    .ltr & {
+      margin-right: 0;
+      margin-right: auto;
+    }
+  }
+
+  .mat-radio-label-content {
+    font-family: $font;
+  }
+
+  .mat-radio-button {
+    & + .mat-radio-button {
+      margin-right: 10px;
+    }
+  }
+}
+
+.profile-picture {
+  width: 100px !important;
+  height: 100px !important;
+  box-shadow: 0 8px 20px 1px rgba(0, 0, 0, 0.12) !important;
+  border: solid 4px #ffffff !important;
+  background: #c8c8c8 url('assets/images/user.svg') no-repeat center !important;
+  margin: 0 auto;
+  border-radius: 50% !important;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: visible !important;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: url('assets/images/edit.svg') no-repeat center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  ngx-dropzone-image-preview {
+    width: 100px !important;
+    height: 100px !important;
+    border: 0 !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    border-radius: 50% !important;
+
+    img {
+      height: 100px !important;
+      opacity: 1 !important;
+      width: 100px !important;
+      object-fit: cover !important;
+      border-radius: 50% !important;
+    }
+  }
+}
+
+
+.profile-picture-before {
+    width: 25px !important;
+    height: 25px !important;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.form-control {
+  border: 1px solid $borderColor;
+  background-color: white;
+  outline: 0;
+  appearance: none;
+  border-radius: 0.5rem;
+  height: 40px;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+
+  &:focus {
+    border-color: $primaryColor;
+    box-shadow: none;
+  }
+
+  &[disabled],
+  &[readonly] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+select.form-control {
+  background: white url('assets/images/select-arrow.svg') no-repeat left 1.5rem
+    center;
+  background-size: 12px;
+
+  .ltr & {
+    background-position: right 1.5rem center;
+  }
+
+  &.has-placeholder {
+    option:first-child {
+      display: none !important;
+    }
+  }
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.control-label {
+  color: $greyTextColor;
+  font-size: 1.4rem;
+
+  // &.required {
+  //   &:after {
+  //     content: '*';
+  //     color: $red;
+  //     margin-right: 3px;
+  //     font-size: 18px;
+  //     line-height: 1;
+
+  //     .ltr & {
+  //       margin-right: 0;
+  //       margin-left: 3px;
+  //     }
+  //   }
+  // }
+}
+
+.vertical {
+  .mat-radio-button {
+    display: block;
+
+    &.mat-radio-button {
+      margin-top: 10px;
+    }
+  }
+}
+
+.ng5-slider-pointer,
+.ng5-slider-bar-wrapper,
+.ng5-slider-bubble {
+  transition-duration: .1s !important;
+}
+
+.phone-tel-input {
+  .country-selector {
+    opacity: 1 !important;
+    right: 0 !important;
+    left: inherit !important;
+
+    .ltr & {
+      left: 0 !important;
+      right: inherit !important;
+    }
+  }
+
+  input:not(.country-search),
+  .mat-form-field-label {
+    padding-right: 90px !important;
+    padding-left: 0 !important;
+    .ltr & {
+      padding-left: 90px !important;
+      padding-right: 0 !important;
+    }
+  }
+}

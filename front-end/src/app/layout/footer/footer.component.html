@@ -1,0 +1,33 @@
+<footer>
+  <div class="container">
+    <nav>
+      <ul>
+        <li>
+          <a [routerLink]="['/home']" [routerLinkActive]="['active']">{{
+            'header.homeLink' | translate
+          }}</a>
+        </li>
+        <li>
+          <a href="#">{{ 'header.aboutLink' | translate }}</a>
+        </li>
+        <li>
+          <a href="#">{{ 'header.termsLink' | translate }}</a>
+        </li>
+        <li>
+          <a href="#">{{ 'header.contactLink' | translate }}</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="store-btns">
+      <a href="#" class="google-store">
+        <img src="assets/images/google-store.svg" alt="" />
+      </a>
+      <a href="#" class="google-store">
+        <img src="assets/images/app-store.svg" alt="" />
+      </a>
+    </div>
+
+    <p class="copyrights">{{ 'general.copyrights' | translate }}</p>
+  </div>
+</footer>
